@@ -26,7 +26,7 @@ public class Conta {
 		
 		this.saldo = valor;
 		
-		return valor;
+		return saldo;
 	}
 	
 	
@@ -36,7 +36,7 @@ public class Conta {
 		
 		this.saldo = saldo - valor;
 		
-		return valor;
+		return saldo;
 	}
 	
 	
