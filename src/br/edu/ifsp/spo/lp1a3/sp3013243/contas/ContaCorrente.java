@@ -3,6 +3,13 @@ package br.edu.ifsp.spo.lp1a3.sp3013243.contas;
 public class ContaCorrente extends Conta{
 
 	
+	public ContaCorrente(String numeroDaConta, String titular) {
+		super(numeroDaConta, titular);
+
+	}
+
+
+
 	public double limiteChequeEspecial;
 	public static double taxaJurosChequeEspecial;
 	

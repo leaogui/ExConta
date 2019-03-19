@@ -5,6 +5,16 @@ public class ContaPoupanca extends Conta {
 	
 	
 	
+	public ContaPoupanca(String numeroDaConta, String titular) {
+		super(numeroDaConta, titular);
+
+	}
+
+
+
+
+
+
 	public static double taxaRendimento;
 	
 	
