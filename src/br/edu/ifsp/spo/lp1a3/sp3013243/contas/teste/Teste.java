@@ -45,18 +45,19 @@ public class Teste {
 		
 	}
 	
-	 @Test
-	 void sacar_funciona(){
+	 	@Test
+	 	void sacar_funciona(){
 		 
-		 //1
-		 double saldo_teste = 555555;
-		 Conta conta = new Conta("Jackinho Daorinho", "777777");
+	 		//1
+	 		double saldo_teste = 0;
+	 		Conta conta = new Conta("Jackinho Daorinho", "777777");
 		 
-		 //2
-		 conta.setSaldo(555555);
+	 		//2
+	 		conta.setSaldo(555555);
+	 		conta.sacar(555555);
 		 
-		 //3
-		 assertEquals(saldo_teste, conta.getSaldo());
+	 		//3
+	 		assertEquals(saldo_teste, conta.getSaldo());
 		 
 		 
 		 
@@ -65,6 +66,46 @@ public class Teste {
 	 }
 	
 	
+		@Test
+	 	void depositar_funciona() {
+	 		
+	 		
+	 		//1
+	 		double saldo_teste = 100;
+	 		Conta conta = new Conta("Jackinho Daorinho", "777777");
+	 		
+	 		//2
+	 		conta.depositar(100);
+	 		
+	 		//3
+	 		assertEquals(saldo_teste, conta.getSaldo());
+	 		
+
+	 		
+	 	}	
+	 	
+
+		
+		@Test
+	 	void transferir_funciona() {
+	 		
+	 		
+	 		//1
+			double saldo_teste = 1000; 
+	 		Conta conta = new Conta("Jackinho Daorinho", "777777");
+	 		Conta outra = new Conta("Joaquin Sorriso", "888888");
+	 		
+	 		//2
+	 		conta.depositar(1000);
+	 		conta.transferirPara(outra, 1000);
+	 		
+	 		//3
+	 		assertEquals(saldo_teste, outra.getSaldo());
+	 		
+	 		
+	 		
+	 		
+	 	}	
 	
 	
 	

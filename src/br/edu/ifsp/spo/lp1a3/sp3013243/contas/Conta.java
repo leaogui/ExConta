@@ -55,7 +55,8 @@ public class Conta {
 	
 	public double transferirPara(Conta outraConta, double valor) {
 	
-		
+		this.sacar(valor);
+		outraConta.depositar(valor);
 		
 		return valor;
 	}
