@@ -17,15 +17,12 @@ public class ContaPoupanca extends Conta {
 
 	public static double taxaRendimento;
 	
+
 	
-	
-	
-	
-	
-	public void aplicarRendimento() {
+	public void aplicarRendimento(double taxaRendimento) {
 		
 		
-		
+		this.saldo = this.saldo + (this.saldo*taxaRendimento);
 		
 		
 	}

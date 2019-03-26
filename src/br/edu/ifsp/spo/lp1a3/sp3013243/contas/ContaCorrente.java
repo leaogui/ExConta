@@ -16,11 +16,10 @@ public class ContaCorrente extends Conta{
 	
 	
 	
-	public void debitarJuros() {
+	public void debitarJuros(double taxaJurosChequeEspecial) {
 		
 		
-		
-		
+		this.saldo = this.saldo - (this.saldo* taxaJurosChequeEspecial);
 		
 	}
 	
