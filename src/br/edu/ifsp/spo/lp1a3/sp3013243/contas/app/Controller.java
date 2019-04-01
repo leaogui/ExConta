@@ -1,4 +1,4 @@
-package App;
+package br.edu.ifsp.spo.lp1a3.sp3013243.contas.app;
 
 import br.edu.ifsp.spo.lp1a3.sp3013243.contas.Conta;
 import br.edu.ifsp.spo.lp1a3.sp3013243.contas.ContaCorrente;

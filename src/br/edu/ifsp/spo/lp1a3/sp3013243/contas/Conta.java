@@ -1,8 +1,8 @@
 package br.edu.ifsp.spo.lp1a3.sp3013243.contas;
 
-import exceptions.NumContaEx;
-import exceptions.SaldoEx;
-import exceptions.TitularEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.NumContaEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.SaldoEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.TitularEx;
 
 public class Conta {
 

@@ -1,7 +1,7 @@
 package br.edu.ifsp.spo.lp1a3.sp3013243.contas;
 
-import exceptions.RendimentoEx;
-import exceptions.SaldoEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.RendimentoEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.SaldoEx;
 
 public class ContaPoupanca extends Conta {
 

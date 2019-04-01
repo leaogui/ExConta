@@ -1,8 +1,8 @@
 package br.edu.ifsp.spo.lp1a3.sp3013243.contas;
 
 
-import exceptions.SaldoEx;
-import exceptions.TaxaZeroEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.SaldoEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.TaxaZeroEx;
 
 public class ContaCorrente extends Conta{
 
