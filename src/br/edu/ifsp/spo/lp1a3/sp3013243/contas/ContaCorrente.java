@@ -1,5 +1,9 @@
 package br.edu.ifsp.spo.lp1a3.sp3013243.contas;
 
+
+import exceptions.SaldoEx;
+import exceptions.TaxaZeroEx;
+
 public class ContaCorrente extends Conta{
 
 	
@@ -18,9 +22,15 @@ public class ContaCorrente extends Conta{
 	
 	public void debitarJuros(double taxaJurosChequeEspecial) {
 		
+		if(taxaJurosChequeEspecial == 0) {
+			
+			throw new TaxaZeroEx("A taxa não pode ser 0");
+			
+		}
+		else {
 		
-		this.saldo = this.saldo - (this.saldo* taxaJurosChequeEspecial);
-		
+		this.saldo = this.saldo - (this.saldo * taxaJurosChequeEspecial);
+		}
 	}
 	
 	
@@ -28,9 +38,17 @@ public class ContaCorrente extends Conta{
 	@Override
 	public double sacar(double valor) {
 		
+		if(valor > this.saldo) {
+			throw new SaldoEx("Você não tem esse saldo.");
+			
+		}
+		else {
+		
+		
+		
 		this.saldo = (saldo - valor) - (saldo - valor) * 0.01  ;
 		
-		
+		}
 		return saldo;
 	}
 	

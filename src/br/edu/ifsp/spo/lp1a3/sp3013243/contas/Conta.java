@@ -1,5 +1,9 @@
 package br.edu.ifsp.spo.lp1a3.sp3013243.contas;
 
+import exceptions.NumContaEx;
+import exceptions.SaldoEx;
+import exceptions.TitularEx;
+
 public class Conta {
 
 	
@@ -11,11 +15,23 @@ public class Conta {
 	
 	public Conta (String numeroDaConta, String titular) {
 		
+		if (numeroDaConta == null || numeroDaConta.isEmpty()) {
+			throw new NumContaEx("O número da conta não pode ser nulo");
+		}
+		else {
 		this.numeroDaConta = numeroDaConta;
+		}
+		
+		
+		if (titular == null || titular.isEmpty()) {
+			throw new TitularEx("O titular da conta não pode ser nulo");
+		}
+		else {
 		this.titular = titular;
-		this.saldo = 0;
+		}
 		
 		
+		this.saldo = 0;	
 		
 	}
 	
@@ -73,9 +89,17 @@ public class Conta {
 	
 	public double sacar(double valor) {
 		
+		if(valor > this.saldo) {
+			throw new SaldoEx("Você não tem esse saldo.");
+			
+		}
+		else {
+		
 		
 		this.saldo = saldo - valor;
 		
+		
+		}
 		return saldo;
 	}
 	
