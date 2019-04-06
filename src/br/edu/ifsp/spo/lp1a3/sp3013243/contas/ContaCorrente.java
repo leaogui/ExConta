@@ -9,6 +9,7 @@ public class ContaCorrente extends Conta{
 	
 	public ContaCorrente(String numeroDaConta, String titular) {
 		super(numeroDaConta, titular);
+		this.taxaJurosChequeEspecial = 0;
 
 	}
 

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import br.edu.ifsp.spo.lp1a3.sp3013243.contas.Conta;
 import br.edu.ifsp.spo.lp1a3.sp3013243.contas.ContaCorrente;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.TaxaZeroEx;
 
 public class TesteCorrente {
 	
@@ -62,5 +63,28 @@ public class TesteCorrente {
  		//3
  		assertEquals(saldo_teste, conta.getSaldo());
  	}
+ 	
+ 
+
+ 	@Test
+ 	void taxa_zero() {
+ 		
+ 		
+ 		try {
+ 			
+ 			ContaCorrente conta = new ContaCorrente("Josézin","7777");
+ 			
+ 		}
+ 		catch(TaxaZeroEx erro) {
+ 			
+ 			
+ 			
+ 		}
+ 		
+ 		
+ 		
+ 	}
+ 	
+ 	
 	
 }

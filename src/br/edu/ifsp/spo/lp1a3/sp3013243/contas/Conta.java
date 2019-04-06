@@ -15,6 +15,8 @@ public class Conta {
 	
 	public Conta (String numeroDaConta, String titular) {
 		
+		this.saldo = 0;	
+		
 		if (numeroDaConta == null || numeroDaConta.isEmpty()) {
 			throw new NumContaEx("O número da conta não pode ser nulo");
 		}
@@ -31,7 +33,6 @@ public class Conta {
 		}
 		
 		
-		this.saldo = 0;	
 		
 	}
 	
@@ -90,6 +91,7 @@ public class Conta {
 	public double sacar(double valor) {
 		
 		if(valor > this.saldo) {
+			
 			throw new SaldoEx("Você não tem esse saldo.");
 			
 		}

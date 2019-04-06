@@ -15,10 +15,7 @@ public class Controller {
 	
 	Conta continha = new Conta("01","Clebin");
 	
-	
-	continha.depositar(1000);
-	
-	continha.sacar(1000);
+	System.out.println(continha.getSaldo());
 	
 	
 	}

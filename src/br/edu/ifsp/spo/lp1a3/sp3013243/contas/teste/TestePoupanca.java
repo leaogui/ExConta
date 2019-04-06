@@ -8,6 +8,7 @@ import br.edu.ifsp.spo.lp1a3.sp3013243.contas.Conta;
 
 
 import br.edu.ifsp.spo.lp1a3.sp3013243.contas.ContaPoupanca;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.RendimentoEx;
 
 public class TestePoupanca {
 	
@@ -45,6 +46,24 @@ public class TestePoupanca {
 		
 		//3
 		assertEquals(saldoTeste, conta.getSaldo());
+		
+		
+		
+	}
+	
+	@Test
+	void rendimento_zero(){
+		
+		try {
+			
+			ContaPoupanca conta = new ContaPoupanca("Josisclei","888888");
+		}
+		
+		catch(RendimentoEx erro) {
+			
+		}
+		
+		
 		
 		
 		

@@ -5,6 +5,9 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import br.edu.ifsp.spo.lp1a3.sp3013243.contas.Conta;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.NumContaEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.SaldoEx;
+import br.edu.ifsp.spo.lp1a3.sp3013243.contas.exceptions.TitularEx;
 
 public class Teste {
 
@@ -107,7 +110,58 @@ public class Teste {
 	 		
 	 	}	
 		
+		@Test
+		void num_null() {
+			
 	
+
+		
+			try {
+			Conta conta = new Conta(null, "7777777");
+			}
+			catch (TitularEx erro) {		
+			}
+		}
+		
+		
+		@Test
+		void titu_null() {
+			
 	
+
+		
+			try {
+			Conta conta = new Conta("Josézin", null);
+			}
+			catch (NumContaEx erro) {		
+			}
+		}
+		
+		
+		
+		
+		@Test
+	 	void sacar_menor(){
+		
+	 		
+	 		
+	 		Conta conta = new Conta("Jackinho Daorinho", "777777");
+	 		
+		 
+	 		try{
+	 		conta.sacar(555);
+	 		}
+	 		catch (SaldoEx erro){
+	 			
+	 			
+	 		}
+	 		
+		 
+ 
+		 
+	 }
+	
+		
+		
 	
 }
